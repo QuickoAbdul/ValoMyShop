@@ -15,6 +15,19 @@
                     <li><nuxt-link to="/products">Shop</nuxt-link></li>
                     <li><nuxt-link to="/">WishList</nuxt-link></li>
                     <li><nuxt-link to="/">Contact</nuxt-link></li>
+                    <li>
+                        <div class="dropdown inline-block relative">
+                            <button class="bg-gray-900 font-semibold rounded inline-flex">
+                            <span class="mr-1">Dropdown</span>
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+                            </button>
+                            <ul class="dropdown-menu absolute hidden pt-1">
+                            <li class=""><a class="rounded-t bg-gray-900 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">One</a></li>
+                            <li class=""><a class="bg-gray-900 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Two</a></li>
+                            <li class=""><a class="rounded-b bg-gray-900 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Three</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     </ul>
                     <!-- Header Icons -->
                     <div class="hidden xl:flex  space-x-5 items-center">
@@ -49,8 +62,7 @@
                     </svg>
                     <span class="flex absolute -mt-5 ml-4">
                     <span class="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-pink-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-3 w-3 bg-pink-500">
-                    </span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-pink-500"></span>
                     </span>
                 </a>
                 <a class="navbar-burger self-center mr-12 xl:hidden" href="#">
@@ -70,6 +82,9 @@
     </div>
 </template>
 
-<style> 
+<style>
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
 
 </style>

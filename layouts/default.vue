@@ -13,18 +13,17 @@
                     <ul class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
                     <li><nuxt-link to="/">Home</nuxt-link></li>
                     <li><nuxt-link to="/products">Shop</nuxt-link></li>
-                    <li><nuxt-link to="/">WishList</nuxt-link></li>
                     <li><nuxt-link to="/">Contact</nuxt-link></li>
                     <li>
                         <div class="dropdown inline-block relative">
                             <button class="bg-gray-900 font-semibold rounded inline-flex">
-                            <span class="mr-1">Dropdown</span>
+                            <span class="mr-1">Categories</span>
                             <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
                             </button>
                             <ul class="dropdown-menu absolute hidden pt-1">
-                            <li class=""><a class="rounded-t bg-gray-900 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">One</a></li>
-                            <li class=""><a class="bg-gray-900 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Two</a></li>
-                            <li class=""><a class="rounded-b bg-gray-900 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Three</a></li>
+                            <li class=""><a class="rounded-t bg-gray-900 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Categories #1</a></li>
+                            <li class=""><a class="bg-gray-900 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Categories #2</a></li>
+                            <li class=""><a class="rounded-b bg-gray-900 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#"> Categories #3</a></li>
                             </ul>
                         </div>
                     </li>

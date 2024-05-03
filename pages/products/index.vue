@@ -1,11 +1,18 @@
 <template>
   <div>
+
     <div class="flex flex-wrap justify-center gap-8 bg-white">
-      <Produit v-for="skin in displayedWeaponSkins" :key="skin.uuid" :title="skin.displayName" :type="skin.skinLevel" :image="getFullRender(skin)" />
+      <Produit v-for="skin in displayedWeaponSkins" :key="skin.uuid" :title="skin.displayName"
+        :image="getFullRender(skin)" :contentTier="getcontenttier(skin)" />
     </div>
+
+    <!-- Pagination -->
+
     <div class="pagination">
-      <button v-for="pageNumber in totalPages" :key="pageNumber" @click="changePage(pageNumber)">{{ pageNumber }}</button>
+      <button v-for="pageNumber in totalPages" :key="pageNumber" @click="changePage(pageNumber)">{{ pageNumber
+        }}</button>
     </div>
+
   </div>
 </template>
 
@@ -17,7 +24,7 @@ export default {
     return {
       weaponSkins: [],
       currentPage: 1,
-      productsPerPage: 24 // Modifier si nécessaire
+      productsPerPage: 24 // Modifier si nécessaire RGAPI-ff2b639c-c610-4366-ba88-365d2f3b3522
     }
   },
   async fetch() {
@@ -35,6 +42,16 @@ export default {
         this.weaponSkins = response.data
       } catch (error) {
         console.error(error)
+      }
+    },
+    async getcontenttier(skin) {
+      const contentUuid = skin.contentTierUuid;
+      try {
+        const response = await this.$axios.$get(`https://valorant-api.com/v1/contenttiers/${contentUuid}`);
+        this.tiertab = response;
+        return this.tiertab.data.displayName;
+      } catch (error) {
+        console.error(error);
       }
     },
     getFullRender(skin) {
